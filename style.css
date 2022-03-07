@@ -217,11 +217,11 @@ a:focus {
 /* Shorthand grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end */
 
 .pos-1 {
-	grid-area: 10 / 1 / 26 / 7;
+	grid-area: 10 / 4 / 26 / 10;
 }
 
 .pos-2 {
-	grid-area: 1 / 18 / 9 / 27;
+	grid-area: 1 / 20 / 20 / 27;
 }
 
 .pos-3 {
@@ -237,15 +237,15 @@ a:focus {
 }
 
 .pos-6 {
-	grid-area: 20 / 46 / 28 / 51;
+	grid-area: 20 / 46 / 28 / 40;
 }
 
 .pos-7 {
-	grid-area: 43 / 1 / 51 / 10;
+	grid-area: 40 / 1 / 30 / 10;
 }
 
 .pos-8 {
-	grid-area: 38 / 14 / 46 / 22;
+	grid-area: 35 / 14 / 46 / 22;
 }
 
 .pos-9 {
@@ -257,6 +257,8 @@ a:focus {
 }
 
 .content__title {
+	display: flex;
+	align-items: center;
 	font-family: myFont;
 	font-weight: 400;
 	font-size: 10vw;
@@ -278,6 +280,27 @@ a:focus {
 }
 
 @media screen and (min-width: 53em) {
+	.btn {
+		margin-top: 20px;
+		color: #666;
+		padding: 20px;
+		font-size: 1rem;
+		cursor: pointer;
+	}
+	
+	.btn-toggle-play {
+		cursor: pointer;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		font-size: 1.5rem;
+		color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--color-text);
+	}
+
 	.message {
 		display: none;
 	}
@@ -351,4 +374,37 @@ a:focus {
 		stroke: var(--cursor-stroke);
 		stroke-width: var(--cursor-stroke-width);
 	}
+}
+
+.btn {
+	margin-top: 15px;
+	color: #666;
+    padding: 10px;
+    font-size: 1rem;
+	cursor: pointer;
+}
+
+.btn-toggle-play {
+	cursor: pointer;
+	width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 0.7rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-text);
+}
+
+.btn-toggle-play .icon-pause{
+    display: none;
+}
+
+.btn-toggle-play.playing .icon-pause{
+    display: inline-block;
+}
+
+.btn-toggle-play.playing .icon-play {
+    display: none;
 }

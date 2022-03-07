@@ -1,3 +1,23 @@
+const $ = document.querySelector.bind(document);
+const playBtn = $('.btn-toggle-play');
+const audio = $('#audio');
+
+let isPlay = false
+
+playBtn.onclick = () => {
+  if(!isPlay) audio.play(); else audio.pause()
+}
+
+audio.onplay = () => {
+  isPlay = true;
+  playBtn.classList.add('playing');
+}
+
+audio.onpause = () => {
+  isPlay = false;
+  playBtn.classList.remove('playing');
+}
+
 // modules are defined as an array
 // [ module function, map of requires ]
 //
